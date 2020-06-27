@@ -25,6 +25,7 @@
 		<module>chuan-run</module>
 		<module>chuan-common</module>
 		<module>chuan-voice</module>
+		<module>chuan-intelligence</module>
 	</modules>
 
 	<dependencies>
