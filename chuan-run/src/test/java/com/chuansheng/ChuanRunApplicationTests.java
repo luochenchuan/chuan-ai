@@ -27,7 +27,7 @@ public class ChuanRunApplicationTests {
 	@Test
 	public void testBaiDuVoiceConversion(){
 
-		playVoice.play("你好, 是否初始化");
+		playVoice.play("你好呀, 川, 是否初始化");
 	}
 
 
