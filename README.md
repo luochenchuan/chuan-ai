@@ -15,9 +15,10 @@
 
 ### 模块介绍
 
-| 模块         | 描述     |
-| ------------ | -------- |
-| chuan-run    | 启动模块 |
-| chuan-common | 公共模块 |
-| chuan-voice  | 语音模块 |
+| 模块               | 描述     |
+| ------------------ | -------- |
+| chuan-run          | 启动模块 |
+| chuan-common       | 公共模块 |
+| chuan-voice        | 语音模块 |
+| chuan-intelligence | 智能模块 |
 
