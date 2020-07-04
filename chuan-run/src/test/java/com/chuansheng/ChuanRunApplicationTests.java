@@ -1,5 +1,6 @@
 package com.chuansheng;
 
+import com.chuansheng.intelligence.IntelligenceRobot;
 import com.chuansheng.voice.impl.BaiDuVoiceConversionImpl;
 import com.chuansheng.voice.play.PlayVoice;
 import org.junit.Test;
@@ -24,10 +25,14 @@ public class ChuanRunApplicationTests {
 	@Autowired
 	private PlayVoice playVoice;
 
-	@Test
-	public void testBaiDuVoiceConversion(){
+	@Autowired
+	private IntelligenceRobot intelligenceRobot;
 
-		playVoice.play("你好呀, 川, 是否初始化");
+	@Test
+	public void testBaiDuVoiceConversion() throws Exception {
+
+//		playVoice.play("你好呀, 川, 是否初始化");
+		intelligenceRobot.robot("明天北京朝阳区有雨吗");
 	}
 
 

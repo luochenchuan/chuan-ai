@@ -34,7 +34,7 @@ public class PlayVoice {
      *
      * @param world
      */
-    public void play(String world) {
+    public void play(String world) throws Exception {
 
         try {
             File mp3 = this.generateFile.generateFile(world);
@@ -43,8 +43,6 @@ public class PlayVoice {
             Player player = new Player(bufferedInputStream);
             player.play();
         } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (JavaLayerException e) {
             e.printStackTrace();
         }
 

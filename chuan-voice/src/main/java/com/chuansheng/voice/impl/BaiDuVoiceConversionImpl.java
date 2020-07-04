@@ -12,10 +12,8 @@ import com.chuansheng.common.http.HttpClient;
 import com.chuansheng.voice.VoiceConversion;
 import org.springframework.stereotype.Component;
 
-import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Objects;
 
 /**
  * @author: zhuchuansheng
@@ -26,7 +24,7 @@ import java.util.Objects;
 @Component
 public class BaiDuVoiceConversionImpl implements VoiceConversion {
 
-    private String uri = "https://ai.baidu.com/aidemo";
+    private String uri = "https://cloud.baidu.com/aidemo";
 
     @Override
     public VoiceResult voiceConversion(VoiceParam voiceParam) {
@@ -42,10 +40,9 @@ public class BaiDuVoiceConversionImpl implements VoiceConversion {
         param.put("type", voiceParam.getType());
         param.put("spd", voiceParam.getSpd().toString());
 
-        String data = HttpClient.post(uri, param, voiceParam.getHeaders());
+        String data = HttpClient.sendRequest("POST", uri, voiceParam.getHeaders(), param);
         result = JSON.parseObject(data, new TypeReference<VoiceResult>() {
         });
-
         return result;
     }
 
